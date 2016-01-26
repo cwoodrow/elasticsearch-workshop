@@ -249,9 +249,9 @@ Commençons par insérer quelques données ...
 	curl -XPOST 'http://localhost:9200/heroes/person/antman' -d '{"firstName":"Hank","lastName":"Pym","aka":"Ant-Man","team":"Avengers","age":41}'
 	curl -XPOST 'http://localhost:9200/heroes/person/wasp' -d '{"firstName":"Janet","lastName":"van Dyne","aka":"Wasp","team":"Avengers","age":32}'
 	curl -XPOST 'http://localhost:9200/heroes/person/hulk' -d '{"firstName":"Bruce","lastName":"Banner","aka":"Hulk","team":"Avengers","age":41}'
-	curl -XPOST 'http://localhost:9200/heroes/person/misterfantastic' -d '{"firstName":"Reed","lastName":"Richards","aka":"Mister Fantastic","team":"FantasticFour","age":45}'
+	curl -XPOST 'http://localhost:9200/heroes/person/misterfantastic' -d '{"firstName":"Reed","lastName":"Richards","aka":"Mister Fantastic","team":"FantasticFour","age":47}'
 	curl -XPOST 'http://localhost:9200/heroes/person/invisiblewoman' -d '{"firstName":"Susan","lastName":"Storm","aka":"Invisible Woman","team":"FantasticFour","age":29}'
-	curl -XPOST 'http://localhost:9200/heroes/person/thehumantorch' -d '{"firstName":"Johnny","lastName":"Storm","aka":"The Human Torch","team":"FantasticFour","age":27}'
+	curl -XPOST 'http://localhost:9200/heroes/person/thehumantorch' -d '{"firstName":"Johnny","lastName":"Storm","aka":"The Human Torch","team":"FantasticFour","age":25}'
 	curl -XPOST 'http://localhost:9200/heroes/person/thething' -d '{"firstName":"Ben","lastName":"Grimm","aka":"The Thing","team":"FantasticFour","age":42}'
 
 
