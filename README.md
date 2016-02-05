@@ -1,6 +1,6 @@
 # Workshop ElasticSearch
 
-*Découverte d'[Elasticsearch](https://www.elastic.co/), par la pratique !*.
+*Découverte d'[ElasticSearch](https://www.elastic.co/), par la pratique !*
 
 Lors de la mise en oeuvre de ce workshop, n'hésitez pas à vous appuyer sur la [documentation officielle de ElasticSearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
 
@@ -11,7 +11,7 @@ ElasticSearch étant basé sur le langage Java, veillez à disposer de **Java** 
 
 ### ElasticSearch
 
-Téléchargez la dernière version d'ElasticSaerch sur [www.elastic.co](https://www.elastic.co/downloads/elasticsearch), ce workshop est basé sur la version **2.1.1**.
+Téléchargez la dernière version d'ElasticSearch sur [www.elastic.co](https://www.elastic.co/downloads/elasticsearch), ce workshop est compatible avec la version **2.1.1**.
 
 Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/elasticsearch-2.1.1`.
 
@@ -25,9 +25,14 @@ Avant de démarrer, installez le plugin suivant :
 	./plugin install mobz/elasticsearch-head
 
 
-Le fichier `$HOME/progz/elasticsearch-<version>/config/elasticsearch.yml`, au format [YAML](http://fr.wikipedia.org/wiki/YAML), permet de configurer ElasticSearch, activez (décommentez) l'option suivante. Pour le reste, la configuration par défaut nous suffit pour l'instant.
+
+Le fichier `$HOME/progz/elasticsearch-<version>/config/elasticsearch.yml`, au format [YAML](http://fr.wikipedia.org/wiki/YAML), permet de configurer ElasticSearch.
+
+Si vous utilisez une version d'ElasticSearch 1.x, activez l'option suivante.
 
 	discovery.zen.ping.multicast.enabled: false
+
+Pour le reste, la configuration par défaut nous suffit pour l'instant.
 
 Vous pouvez à présent démarrer le serveur.
 
@@ -63,7 +68,7 @@ Pour accéder au plugin précédemment installé il vous suffit de consulter l'U
 
 ### Kibana
 
-Téléchargez la dernière version de Kibana correspondante à votre OS sur [www.elastic.co](https://www.elastic.co/products/kibana), ce workshop est basé sur la version **4.3.1**.
+Téléchargez la dernière version de Kibana correspondante à votre OS sur [www.elastic.co](https://www.elastic.co/products/kibana), ce workshop est compatible avec sur la version **4.3.1**.
 
 Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/kibana-4.3.1`.
 
@@ -86,7 +91,7 @@ Connectez-vous à votre instance de Kibana locale avec votre browser  :
 
 ### Logstash
 
-Télécharger la dernière version de logstash sur [www.elastic.co](https://www.elastic.co/downloads/logstash), ce workshop est basé sur la version **2.1.1**.
+Télécharger la dernière version de logstash sur [www.elastic.co](https://www.elastic.co/downloads/logstash), ce workshop est compatible avec la version **2.1.1**.
 
 Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/logstash-2.1.1`.
 
@@ -96,14 +101,22 @@ Pour vérifier l'installation de logstash, lancez la commande suivante :
 
 ### Optionnel : Sense
 
-Si vous utilisez *Google Chrome*, vous pouvez installer le plugin [Sense](https://chrome.google.com/webstore/detail/sense-beta/lhjgkmllcaadmopgmanpapmpjgmfcfig?hl=fr) qui facilite l'écriture des requêtes.
+Vous pouvez installer le client Sense pour faciliter l'écriture des requêtes.
 
-### Optionnel(Windows) : Curl
+	bin/kibana plugin --install elastic/sense
+
+Vous pouvez ensuite lancer kibana pour utiliser Sense.
+
+	bin/kibana
+
+Si vous utilisez *Google Chrome*, il existe aussi un plugin sense (version plus ancienne) [Sense](https://chrome.google.com/webstore/detail/sense-beta/lhjgkmllcaadmopgmanpapmpjgmfcfig?hl=fr).
+
+### Optionnel (Windows) : Curl
 
 Si vous êtes sous *Windows* vous pouvez éventuellement [télécharger](http://curl.haxx.se/download.html) et installer le client `curl`
 
 ## Concepts essentiels
-Petit rappel des concepts essentiels.
+Petit rappel des concepts essentiels...
 
 ### Document
 Un document est un élément unitaire, au format JSON, stocké dans ElasticSearch.
@@ -124,7 +137,7 @@ Un type est un sous-ensemble d'un index qui permet de regrouper des documents. D
 Un shard est un fragment d'un index. Ce sont les shards qui permettent de partitionner les index sur plusieurs noeuds. Ainsi, un index peut être partitionner sur autant de noeuds que cet index comporte de shards. Le nombre de shards par défaut est de **5**.
 
 ### Réplique
-Une réplique est une copie intégrale d'un index. Les répliques permettent d'augmenter la tolérance à la panne du système ainsi que la durabilité des données. Une réplique comporte autant de shards que l'index original. Le nombre de répliques par défaut est de **1**.
+Une réplique est une copie intégrale des données d'un index. Les répliques permettent d'améliorer la tolérance à la panne du cluster ainsi que la durabilité des données. Une réplique comporte autant de shards que l'index original. Le nombre de répliques par défaut est de **1**.
 
 ## Prise en main de l'API
 
