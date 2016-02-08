@@ -249,9 +249,9 @@ Pour supprimer un document, on utilise le verbe **DELETE**
 	curl -XDELETE 'localhost:9200/heroes/person/ironman'
 
 ### Exists
-Il est possible, à l'aide du verbe **HEAD** de vérifier l'existance d'un document.
+Il est possible, à l'aide du verbe **HEAD** de vérifier l'existance d'un document (**attention, cette requête pas sous Sense!**)
 
-	curl -XHEAD 'localhost:9200/heroes/person/ironman'
+	curl -XHEAD 'localhost:9200/heroes/person/ironman' -i
 
 Les statut renvoyé :
 
