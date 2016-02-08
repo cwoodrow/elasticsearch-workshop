@@ -11,9 +11,9 @@ ElasticSearch étant basé sur le langage Java, veillez à disposer de **Java** 
 
 ### ElasticSearch
 
-Téléchargez la dernière version d'ElasticSearch sur [www.elastic.co](https://www.elastic.co/downloads/elasticsearch), ce workshop est compatible avec la version **2.1.1**.
+Téléchargez la dernière version d'ElasticSearch sur [www.elastic.co](https://www.elastic.co/downloads/elasticsearch), ce workshop est compatible avec la version **2.2.0**.
 
-Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/elasticsearch-2.1.1`.
+Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/elasticsearch-2.2.0`.
 
 Les exécutables nécessaires au fonctionnement d'ElasticSearch se trouvent dans le dossier `$HOME/progz/elasticsearch-<version>/bin`, **elasticsearch** permet de lancer le noeud et **plugin** permet d'installer des plugins.
 
@@ -68,7 +68,7 @@ Pour accéder au plugin précédemment installé il vous suffit de consulter l'U
 
 ### Kibana
 
-Téléchargez la dernière version de Kibana correspondante à votre OS sur [www.elastic.co](https://www.elastic.co/products/kibana), ce workshop est compatible avec sur la version **4.3.1**.
+Téléchargez la dernière version de Kibana correspondante à votre OS sur [www.elastic.co](https://www.elastic.co/products/kibana), ce workshop est compatible avec sur la version **4.4.0**.
 
 Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/kibana-4.3.1`.
 
@@ -91,7 +91,7 @@ Connectez-vous à votre instance de Kibana locale avec votre browser  :
 
 ### Logstash
 
-Télécharger la dernière version de logstash sur [www.elastic.co](https://www.elastic.co/downloads/logstash), ce workshop est compatible avec la version **2.1.1**.
+Télécharger la dernière version de logstash sur [www.elastic.co](https://www.elastic.co/downloads/logstash), ce workshop est compatible avec la version **2.2.0**.
 
 Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/logstash-2.1.1`.
 
@@ -194,13 +194,18 @@ Pour l'insertion de données, les verbes **POST** et **PUT** sont équivalents. 
 La réponse renvoyée contient l'identifiant généré par ElasticSearch.
 
 ```javascript
-	{
-	   "_index": "heroes",
-	   "_type": "person",
-	   "_id": "AUuFm0z0oSZRHss7_tP7",
-	   "_version": 1,
-	   "created": true
-	}
+    {
+      "_index": "heroes",
+      "_type": "person",
+      "_id": "AVLAbGUTL1N-EpXDlqsB",
+      "_version": 1,
+      "_shards": {
+        "total": 2,
+        "successful": 1,
+        "failed": 0
+      },
+      "created": true
+    }
 ```
 
 ### Extraction
