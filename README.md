@@ -74,8 +74,8 @@ Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/kibana-
 
 Ouvrez le fichier `config/kibana.yml` modifier les valeur suivante :
 
-    elasticsearch.url: "http://localhost:9200" // l'instance d'ElasticSearch ciblée
-    kibana.index: ".kibana" // dans le cadre du workshop, donner un nom unique
+    elasticsearch.url: "http://localhost:9200" # l'instance d'ElasticSearch ciblée
+    kibana.index: ".kibana" # dans le cadre du workshop, donner un nom unique
 
 Pour vérifier l'installation de Kibana, vous pouvez lancer la commande suivante :
 
