@@ -376,3 +376,12 @@ Quelques exercices complémentaires :
 * Vous pouvez à présent écrire une agrégation qui calcule l'age maximum par équipe.
 * Vous pouvez à présent écrire une agrégation qui calcule l'age maximum par équipe pour les personnages dont le nom commence par la lettre 't'.
 * En utilisant les agrégations de type [Histogram](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-histogram-aggregation.html), créez une aggrégation permettant de regrouper les héros par tranche d'age (par dizaine).
+
+# ELK
+Connectez-vous sur https://apps.twitter.com/ authentifiez-vous avec votre compte twitter si nécessaire.
+Créez une nouvelle application.
+Cliquez sur l'onglet **Keys and Access Tokens**.
+Cliquez sur le bouton (tout en bas) **Create my access token**
+Démarrez **Elasticsearch** et **Kibana**
+Copiez les fichiers `twitter_template.json` et `twitter.conf` dans ${LOGSTASH_HOME}/bin (pour gagner du temps, la prochaine fois, vous les mettrez ailleurs :D).
+Ouvrez le fichier `twitter.conf` dans un éditeur de texte.
