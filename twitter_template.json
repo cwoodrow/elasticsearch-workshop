@@ -2,13 +2,31 @@
   "template": "twitter",
   "order":    1,
   "settings": {
-    "number_of_shards": 1
+    "number_of_shards": 1,
+    "index.mapping.total_fields.limit": 2000,
+    "analysis": {
+      "analyzer": {
+        "3-grams-analyzer": {
+          "tokenizer": "standard",
+          "filter" : ["lowercase","english-stop-words", "3-grams-shingle"]
+        }
+      },
+      "filter" : {
+        "3-grams-shingle" : {
+          "type": "shingle",
+          "max_shingle_size":4,
+          "min_shingle_size":4,
+          "output_unigrams":false
+        },
+        "english-stop-words": {
+          "type": "stop",
+          "stopwords":  "_english_"
+        }
+      }
+    }
   },
   "mappings": {
     "tweet": {
-      "_all": {
-        "enabled": false
-      },
       "dynamic_templates" : [ {
          "message_field" : {
            "match" : "message",
@@ -31,7 +49,10 @@
        } ],
       "properties": {
         "text": {
-          "type": "string"
+          "type": "string",
+          "fields" : {
+            "trigrams" : {"type": "string", "analyzer" : "3-grams-analyzer", "fielddata" : true}
+          }
         },
           "coordinates": {
           "properties": {

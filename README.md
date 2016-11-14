@@ -11,9 +11,9 @@ ElasticSearch étant basé sur le langage Java, veillez à disposer de **Java** 
 
 ### ElasticSearch
 
-Téléchargez la dernière version d'ElasticSearch sur [www.elastic.co](https://www.elastic.co/downloads/elasticsearch), ce workshop est compatible avec la version **2.3.3**.
+Téléchargez la dernière version d'ElasticSearch sur [www.elastic.co](https://www.elastic.co/downloads/elasticsearch), ce workshop est compatible avec la version **5.0.0**.
 
-Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/elasticsearch-2.3.3`.
+Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/elasticsearch-5.0.0`.
 
 Les exécutables nécessaires au fonctionnement d'ElasticSearch se trouvent dans le dossier `$HOME/progz/elasticsearch-<version>/bin`, **elasticsearch** permet de lancer le noeud et **plugin** permet d'installer des plugins.
 
@@ -26,11 +26,7 @@ Avant de démarrer, installez le plugin suivant :
 
 Le fichier `$HOME/progz/elasticsearch-<version>/config/elasticsearch.yml`, au format [YAML](http://fr.wikipedia.org/wiki/YAML), permet de configurer ElasticSearch.
 
-Si vous utilisez une version d'ElasticSearch 1.x, activez l'option suivante.
-
-	discovery.zen.ping.multicast.enabled: false
-
-Pour le reste, la configuration par défaut nous suffit pour l'instant.
+La configuration par défaut nous suffit pour l'instant.
 
 Vous pouvez à présent démarrer le serveur.
 
@@ -46,18 +42,19 @@ Pour vérifier le démarrage de votre noeud ElasticSearch,
 
 Vous devriez obtenir une réponse qui ressemble à celle là :
 ```javascript
-	{
-		"name": "Amiko Kobayashi",
-		"cluster_name": "elasticsearch",
-		"version": {
-			"number": "2.3.3",
-			"build_hash": "218bdf10790eef486ff2c41a3df5cfa32dadcfde",
-			"build_timestamp": "2016-05-17T15:40:04Z",
-			"build_snapshot": false,
-			"lucene_version": "5.5.0"
-		},
-		"tagline": "You Know, for Search"
-	}
+{
+    "name": "0yON8Wi",
+    "cluster_name": "elasticsearch",
+    "cluster_uuid": "zOMlo62SSDObhNxnlUx6Jw",
+    "version": {
+        "number": "5.0.0",
+        "build_hash": "253032b",
+        "build_date": "2016-10-26T04:37:51.531Z",
+        "build_snapshot": false,
+        "lucene_version": "6.2.0"
+    },
+    "tagline": "You Know, for Search"
+}
 ```
 
 Pour accéder au plugin précédemment installé il vous suffit de consulter l'URL suivante :
@@ -66,26 +63,18 @@ Pour accéder au plugin précédemment installé il vous suffit de consulter l'U
 
 ### Kibana
 
-Téléchargez la dernière version de Kibana correspondante à votre OS sur [www.elastic.co](https://www.elastic.co/products/kibana), ce workshop est compatible avec sur la version **4.5.1**.
+Téléchargez la dernière version de Kibana correspondante à votre OS sur [www.elastic.co](https://www.elastic.co/products/kibana), ce workshop est compatible avec sur la version **5.0.0**.
 
-Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/kibana-4.5.1`.
+Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/kibana-5.0.0`.
 
 Ouvrez le fichier `config/kibana.yml` modifier les valeur suivante :
 
-    elasticsearch.url: "http://localhost:9200" # l'instance d'ElasticSearch ciblée
-    kibana.index: ".kibana" # dans le cadre du workshop, donner un nom unique
+    * elasticsearch.url: "http://localhost:9200" # l'instance d'ElasticSearch ciblée
+    * kibana.index: ".kibana" # dans le cadre du workshop, donner un nom unique
 
 Pour vérifier l'installation de Kibana, vous pouvez lancer la commande suivante :
 
     bin/kibana --version
-
-Installez le plugin Timelion
-
-		bin/kibana plugin -install elastic/timelion
-
-Installez le plugin Sense
-
-		bin/kibana plugin --install elastic/sense
 
 Vous pouvez maintenant lancer Kibana :
 
@@ -95,13 +84,11 @@ Connectez-vous à votre instance de Kibana locale avec votre browser  :
 
     http://localhost:5601
 
-Si vous utilisez *Google Chrome*, il existe aussi un plugin sense (version plus ancienne) [Sense](https://chrome.google.com/webstore/detail/sense-beta/lhjgkmllcaadmopgmanpapmpjgmfcfig?hl=fr).
-
 ### Logstash
 
-Télécharger la dernière version de logstash sur [www.elastic.co](https://www.elastic.co/downloads/logstash), ce workshop est compatible avec la version **2.3.3**.
+Télécharger la dernière version de logstash sur [www.elastic.co](https://www.elastic.co/downloads/logstash), ce workshop est compatible avec la version **5.0.0**.
 
-Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/logstash-2.3.3`.
+Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/logstash-5.0.0`.
 
 Pour vérifier l'installation de logstash, lancez la commande suivante :
 
