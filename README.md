@@ -213,11 +213,13 @@ Pour mettre à jour les données, il est possible d'utiliser les requêtes **PUT
 
 Il est possible d'effectuer des mises à jour partielles en utilisant l'API `_update`.
 
+```
 	curl -XPOST 'localhost:9200/heroes/person/ironman/_update' -d '{
 		"doc" : {
 			"firstName" : "Tomy"
 		}
 	}'
+```
 
 ### Suppression
 Pour supprimer un document, on utilise le verbe **DELETE**
@@ -294,17 +296,18 @@ Bien qu'il soit possible de combiner recherche et aggrégations, nous ne nous in
 
 Obtenir la répartition des valeurs du terme `team` dans les documents de type `person` de l'index `heroes` :
 
-
+```
 	curl -XPOST 'http://localhost:9200/heroes/person/_search' -d '{
 	    "size": 0,
 	    "aggs" : {
 	        "teams" : {
 	            "terms": {
-	                "field": "team"
+	                "field": "team.keyword"
 	            }
 	        }
 	    }
 	}
+```
 
 Il est possible de faire des sous-agrégations. Obtenir la répartition des valeurs du terme `lastName` dans la répartion du terme `team` dans les documents de type `person` de l'index `heroes` :
 
@@ -313,12 +316,12 @@ Il est possible de faire des sous-agrégations. Obtenir la répartition des vale
 	    "aggs" : {
 	        "teams" : {
 	            "terms": {
-	                "field": "team"
+	                "field": "team.keyword"
 	            },
 				"aggs" : {
 	                "names" : {
 	                    "terms": {
-	    	                "field": "lastName"
+	    	                "field": "lastName.keyword"
 	    	            }
 	                }
 				}
@@ -333,7 +336,7 @@ Il est possible de faire des calculs avec les aggrégations. L'âge moyen des me
 	     "aggs" : {
 	         "teams" : {
 	            "terms": {
-	                "field": "team",
+	                "field": "team.keyword",
 	                "order" : { "avgAge" : "desc" }
 	            },
 				"aggs" : {
