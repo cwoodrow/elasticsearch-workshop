@@ -17,13 +17,6 @@ Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/elastic
 
 Les exécutables nécessaires au fonctionnement d'ElasticSearch se trouvent dans le dossier `$HOME/progz/elasticsearch-<version>/bin`, **elasticsearch** permet de lancer le noeud et **plugin** permet d'installer des plugins.
 
-Avant de démarrer, installez le plugin suivant :
-
-* head (administration)
-
-	./plugin install mobz/elasticsearch-head
-
-
 Le fichier `$HOME/progz/elasticsearch-<version>/config/elasticsearch.yml`, au format [YAML](http://fr.wikipedia.org/wiki/YAML), permet de configurer ElasticSearch.
 
 La configuration par défaut nous suffit pour l'instant.
@@ -38,7 +31,7 @@ Il est possible d'ajouter des options Java pour augmenter la mémoire allouée �
 
 Pour vérifier le démarrage de votre noeud ElasticSearch,
 
-	http://localhost:9200/
+	[http://localhost:9200/](http://localhost:9200/)
 
 Vous devriez obtenir une réponse qui ressemble à celle là :
 ```javascript
@@ -56,10 +49,6 @@ Vous devriez obtenir une réponse qui ressemble à celle là :
     "tagline": "You Know, for Search"
 }
 ```
-
-Pour accéder au plugin précédemment installé il vous suffit de consulter l'URL suivante :
-
-* [http://localhost:9200/_plugin/head/](http://localhost:9200/_plugin/head/)
 
 ### Kibana
 
