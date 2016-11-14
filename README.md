@@ -58,8 +58,8 @@ Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/kibana-
 
 Ouvrez le fichier `config/kibana.yml` modifier les valeur suivante :
 
-    * elasticsearch.url: "http://localhost:9200" # l'instance d'ElasticSearch ciblée
-    * kibana.index: ".kibana" # dans le cadre du workshop, donner un nom unique
+* elasticsearch.url: "http://localhost:9200" # l'instance d'ElasticSearch ciblée
+* kibana.index: ".kibana" # dans le cadre du workshop, donner un nom unique
 
 Pour vérifier l'installation de Kibana, vous pouvez lancer la commande suivante :
 
@@ -124,18 +124,22 @@ L'API d'ElasticSearch est composé d'un ensemble d'APIs qui exposent des opérat
 
 D'une manière générale, les end points sont construits de la manière suivante :
 
+```
 	http://[host]:[port]/index/type/_action|id
+```
 
 Par exemple :
-
+```
 	localhost:9200/heroes/person/_search // pour effectuer une recherche parmi les documents de type 'person' dans l'index 'heroes'
 	localhost:9200/heroes/person/_count // pour compter le nombre de documents de type 'person' dans l'index 'heroes'
 	localhost:9200/heroes/person/ironman // pour accéder au document 'ironman'
-
+```
 
 Les actions sur les index permettent généralement d'effectuer l'opération sur plusieurs index simultanément. Par exemple, pour effectuer une requête sur les index index1 et index2, il est possible d'utiliser l'URL suivante :
 
+```
 	localhost:9200/heroes,vilains/_search
+```
 
 Vous trouverez de nombreux exemples (inclusions, exclusions, jokers, ...) dans la documentation.
 
