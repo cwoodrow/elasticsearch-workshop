@@ -81,7 +81,7 @@ Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/logstas
 
 Pour vérifier l'installation de logstash, lancez la commande suivante :
 
-    bin/logstash version
+    bin/logstash -V
 
 ### Optionnel (Windows) : Curl
 
