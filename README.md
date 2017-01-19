@@ -7,13 +7,13 @@ Lors de la mise en oeuvre de ce workshop, n'hésitez pas à vous appuyer sur la 
 ## Installation
 
 ### Java
-ElasticSearch étant basé sur le langage Java, veillez à disposer de **Java** (Java 7 minimum, Java 8 recommandé) installé sur votre machine. Vous pouvez vérifier l'installation de Java à l'aide de la commande `java -version`.
+ElasticSearch étant basé sur le langage Java, veillez à disposer de **Java 8** installé sur votre machine. Vous pouvez vérifier l'installation de Java à l'aide de la commande `java -version`.
 
 ### ElasticSearch
 
-Téléchargez la dernière version d'ElasticSearch sur [www.elastic.co](https://www.elastic.co/downloads/elasticsearch), ce workshop est compatible avec la version **5.0.0**.
+Téléchargez la dernière version d'ElasticSearch sur [www.elastic.co](https://www.elastic.co/downloads/elasticsearch), ce workshop est compatible avec la version **5.1.2**.
 
-Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/elasticsearch-5.0.0`.
+Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/elasticsearch-5.1.2`.
 
 Les exécutables nécessaires au fonctionnement d'ElasticSearch se trouvent dans le dossier `$HOME/progz/elasticsearch-<version>/bin`, **elasticsearch** permet de lancer le noeud et **plugin** permet d'installer des plugins.
 
@@ -40,7 +40,7 @@ Vous devriez obtenir une réponse qui ressemble à celle là :
     "cluster_name": "elasticsearch",
     "cluster_uuid": "zOMlo62SSDObhNxnlUx6Jw",
     "version": {
-        "number": "5.0.0",
+        "number": "5.1.2",
         "build_hash": "253032b",
         "build_date": "2016-10-26T04:37:51.531Z",
         "build_snapshot": false,
@@ -52,9 +52,9 @@ Vous devriez obtenir une réponse qui ressemble à celle là :
 
 ### Kibana
 
-Téléchargez la dernière version de Kibana correspondante à votre OS sur [www.elastic.co](https://www.elastic.co/products/kibana), ce workshop est compatible avec sur la version **5.0.0**.
+Téléchargez la dernière version de Kibana correspondante à votre OS sur [www.elastic.co](https://www.elastic.co/products/kibana), ce workshop est compatible avec sur la version **5.1.2**.
 
-Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/kibana-5.0.0`.
+Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/kibana-5.1.2`.
 
 Ouvrez le fichier `config/kibana.yml` modifier les valeur suivante :
 
@@ -75,9 +75,9 @@ Connectez-vous à votre instance de Kibana locale avec votre browser  :
 
 ### Logstash
 
-Télécharger la dernière version de logstash sur [www.elastic.co](https://www.elastic.co/downloads/logstash), ce workshop est compatible avec la version **5.0.0**.
+Télécharger la dernière version de logstash sur [www.elastic.co](https://www.elastic.co/downloads/logstash), ce workshop est compatible avec la version **5.1.2**.
 
-Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/logstash-5.0.0`.
+Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/logstash-5.1.2`.
 
 Pour vérifier l'installation de logstash, lancez la commande suivante :
 
