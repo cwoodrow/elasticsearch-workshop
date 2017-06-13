@@ -11,9 +11,9 @@ ElasticSearch étant basé sur le langage Java, veillez à disposer de **Java 8*
 
 ### ElasticSearch
 
-Téléchargez la dernière version d'ElasticSearch sur [www.elastic.co](https://www.elastic.co/downloads/elasticsearch), ce workshop est compatible avec la version **5.1.2**.
+Téléchargez la dernière version d'ElasticSearch sur [www.elastic.co](https://www.elastic.co/downloads/elasticsearch), ce workshop est compatible avec la version **5.4.1**.
 
-Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/elasticsearch-5.1.2`.
+Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/elasticsearch-5.4.1`.
 
 Les exécutables nécessaires au fonctionnement d'ElasticSearch se trouvent dans le dossier `$HOME/progz/elasticsearch-<version>/bin`, **elasticsearch** permet de lancer le noeud et **plugin** permet d'installer des plugins.
 
@@ -52,9 +52,9 @@ Vous devriez obtenir une réponse qui ressemble à celle là :
 
 ### Kibana
 
-Téléchargez la dernière version de Kibana correspondante à votre OS sur [www.elastic.co](https://www.elastic.co/products/kibana), ce workshop est compatible avec sur la version **5.1.2**.
+Téléchargez la dernière version de Kibana correspondante à votre OS sur [www.elastic.co](https://www.elastic.co/products/kibana), ce workshop est compatible avec sur la version **5.4.1**.
 
-Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/kibana-5.1.2`.
+Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/kibana-5.4.1`.
 
 Ouvrez le fichier `config/kibana.yml` modifier les valeur suivante :
 
@@ -75,9 +75,9 @@ Connectez-vous à votre instance de Kibana locale avec votre browser  :
 
 ### Logstash
 
-Télécharger la dernière version de logstash sur [www.elastic.co](https://www.elastic.co/downloads/logstash), ce workshop est compatible avec la version **5.1.2**.
+Télécharger la dernière version de logstash sur [www.elastic.co](https://www.elastic.co/downloads/logstash), ce workshop est compatible avec la version **5.4.1**.
 
-Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/logstash-5.1.2`.
+Dézippez l'archive dans le dossier de votre choix, par exemple `~/progz/logstash-5.4.1`.
 
 Pour vérifier l'installation de logstash, lancez la commande suivante :
 
